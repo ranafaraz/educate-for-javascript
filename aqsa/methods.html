@@ -1,0 +1,182 @@
+<!--DOCTYPE html -->
+<html>
+    <head>
+	    <title> JavaScript </title>
+    </head>
+<body><br>
+    <h1> Array Methods </h1>
+	                
+					 <!-- toString method -->
+	<h3>1_toString()</h3>
+    <p>The toString() method returns an array as a comma separated string:</p>
+	<p id="demo"> </p>
+	<script>
+	        var name = ["aqsa", "nadia", "madiha", "kinza"];
+			document.getElementById("demo").innerHTML = name.toString();
+			
+			
+	</script>
+	                 <!-- join method -->
+	
+	<h3>2_join()</h3>
+    <p>The join() method joins array elements into a string.</p>
+	<p id="demo1"> </p>
+    
+	<script>
+	        var name2 = ["aqsa", "nadia", "madiha", "kinza"];
+			document.getElementById("demo1").innerHTML = name2.join("@");
+	</script>
+	
+	                 <!-- Pop method -->
+				 
+	<h3>3_POP() </h3>
+	<p>The pop() method removes the last element from an array.</p>
+	
+	<button onclick="popItem()"> Pop </button>
+	
+	<p id="one"></p>
+	<p id="two"></p>
+	
+	<script>
+	        var popElement=["aqsa", "nadia", "madiha", "kinza","Nazia"];
+			document.getElementById("one").innerHTML = popElement;
+			
+		function popItem()	
+		{
+			popElement.pop();
+			document.getElementById("two").innerHTML = popElement;
+		}
+	</script>
+	                     <!-- Push method -->
+	<h3>4_Push() </h3>
+	<p>The push() method appends a new element to an array.</p>
+	
+	<button onclick="insertName()"> Push </button>
+	<p id="push"></p>
+	<p id="push2"></p>
+	
+	<script>
+	        var pushElement=["aqsa", "nadia", "madiha", "kinza"];
+			document.getElementById("push").innerHTML = pushElement;
+			
+	function insertName()
+	{
+	    pushElement.push("nazia");
+		document.getElementById("push2").innerHTML = pushElement;
+	}
+	</script>
+	
+	            <!-- shifting element -->
+	<h3>5_Shift() </h3>
+	<p>The shift() method removes the first element of an array (and "shifts" all other elements to the left):</p>
+	
+	<button onclick="shiftElement()">shift </button>
+	<p id="shift"></p>
+	<p id="shift2"></p>
+	<script>
+	        var shiftItem = ["aqsa", "nadia", "madiha", "kinza"];
+			document.getElementById("shift").innerHTML = shiftItem;
+		function shiftElement()
+		{
+		    shiftItem.shift();
+			document.getElementById("shift2").innerHTML = shiftItem;
+		}
+	</script>
+	
+	
+	            <!-- changing  element -->
+	<h3>6_Changing Element </h3>
+	<p>Array elements are accessed using their index number:</p>
+	
+	<button onclick="Element()">change </button>
+	<p id="a"></p>
+	<p id="b"></p>
+	<script>
+	        var item = ["aqsa", "nadia", "madiha", "kinza"];
+			document.getElementById("a").innerHTML = item;
+		function Element()
+		{
+		    item[0]= "Nazia";
+			document.getElementById("b").innerHTML = item;
+		}
+	</script>
+	
+	             <!-- delete item -->
+	<h3>7_Delete Item </h3>
+	<p>Since JavaScript arrays are objects, elements can be deleted by using the JavaScript operator delete</p>
+	
+	<button onclick="deleteElement()"> delete </button>
+	<p id="del"></p>
+	<p id="del2"></p>
+	<p id="del3"></p>
+	
+	<script>
+	         var dItem = ["nadia","nazia","urwa","maryam","aqsa"];
+			 document.getElementById("del").innerHTML= dItem;
+			 
+		function deleteElement()
+		{
+		    delete dItem[1];
+			document.getElementById("del2").innerHTML=dItem;
+			document.getElementById("del3").innerHTML="The deleting item is: " + dItem[1];
+		}
+		
+	</script>
+	
+	        <!-- splice Method -->
+	<h3>8_Splice() </h3>
+	<p>The splice() method adds new elements to an array.</p>
+    <button onclick="spliceItem()"> Splice </button>
+	<p id="1"></p>
+	<p id="2"></p>
+	<script>
+	         var splice = ["nazia","tuba","kinza","nadia","madiha","aqsa"];
+			 document.getElementById("1").innerHTML = splice;
+			 
+	     function spliceItem()
+		 {
+		    splice.splice(0,1, "Anas","Noman");
+			document.getElementById("2").innerHTML = splice;
+		 }
+	</script>
+	
+	<!-- splice Method to remove item -->
+	<h3> 9_Splice() to remove element </h3>
+	<p>With clever parameter setting, you can use splice() to remove elements without leaving "holes" in the array:</p>
+    <button onclick="removeItem()"> Splice </button>
+		<p id="r1"></p>
+		<p id="r2"></p>
+	<script>
+	         var remove = ["nazia","tuba","kinza","nadia","madiha","aqsa"];
+			 document.getElementById("r1").innerHTML = remove;
+			 
+	     function removeItem()
+		 {
+		    remove.splice(0,1);
+			document.getElementById("r2").innerHTML = remove;
+		 }
+	</script>
+	
+	     <!-- concat -->
+	<h3>10_concat()</h3>
+	<p>The concat() method is used to merge (concatenate) arrays:</p>
+	<button onclick="merge()">Merge </button>
+		<p id="demo"></p>
+		<p id="demo1"></p>
+		<p id="demo2"></p>
+	<script>
+		var girls = ["Aqsa", "Madiha", "Nazia", "Nadia", "Kinza"];
+		var boys = ["Anas", "Noman", "Waleed"];
+		document.getElementById("demo").innerHTML = girls;
+		document.getElementById("demo1").innerHTML = boys;
+
+		function merge(){
+		var students = girls.concat(boys);
+		document.getElementById("demo2").innerHTML = students;
+		}
+	</script>
+    
+
+	
+</body>
+</html>

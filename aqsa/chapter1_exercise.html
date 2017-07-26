@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head> <title>Question 6.5</title> </head>
+<body>
+        <h3>Chapter1:Exercise </h3>
+		
+		<!-- find the product -->
+		<h4>Find the product: </h4><button onclick="product()">Product </button>
+		<script>
+		     function product()
+			 {
+		        var result;
+				var x;
+				var y;
+				var z;
+				var xVal;
+				var yVal;
+				var zVal;
+			x = window.prompt("please enter the first number: ");
+			y = window.prompt("please enter the second number: ");
+			z = window.prompt("please enter the third number: ");
+			
+			xVal = parseInt( x );
+			
+			yVal = parseInt( y );
+			
+			zVal = parseInt( z );
+			result = xVal * yVal * zVal;
+			window.alert( "The product is " + result);
+			}
+		</script>
+		
+		<!-- find the sum -->
+		<h4>Find the sum & Average: </h4><button onclick="sum()">Try it</button>
+		<script>
+		     function sum()
+			 {
+		        var result;
+				var x;
+				var y;
+				var z;
+				var xVal;
+				var yVal;
+				var zVal;
+				var average;
+			x = window.prompt("please enter the first number: ");
+			y = window.prompt("please enter the second number: ");
+			z = window.prompt("please enter the third number: ");
+			
+			xVal = parseInt( x );
+			
+			yVal = parseInt( y );
+			
+			zVal = parseInt( z );
+			result = xVal + yVal + zVal;
+			average = result/3;
+			window.alert( "The sum is " + result + "\n"
+			             +"Average is "+ average);
+			}	
+		</script>
+		
+		<!-- division -->
+		<h4>Division: </h4><button onclick="divide()">Divide</button>
+		<script>
+		     function divide()
+			 {
+		        var result;
+				var x;
+				var y;
+				
+				var xVal;
+				var yVal;
+				
+			x = window.prompt("please enter the first number: ");
+			y = window.prompt("please enter the second number: ");
+			
+			
+			xVal = parseInt( x );
+			
+			yVal = parseInt( y );
+			
+			result = xVal / yVal;
+			window.alert( "Answer is: " + result);
+			}
+        </script>			
+	    
+		<!-- find the modulus -->
+			<h4>Modulus: </h4><button onclick="modulus()">Modulus</button>
+		<script>
+			var result;
+			var x;
+			var y;
+			var xVal;
+			var yVal;
+		     function modulus()
+			 {
+				
+			x = window.prompt("please enter the first number: ");
+			y = window.prompt("please enter the second number: ");
+			
+			
+			xVal = parseInt( x );
+			
+			yVal = parseInt( y );
+			
+			result = xVal % yVal;
+			window.alert( "The modulus is: " + result );
+			}	
+		</script><br><br>
+		<!-- find the largest number -->
+		<h3> Find the maximum value: </h3>
+		<button onclick="maximum()" > try it </button>
+		<script>
+		    function maximum()
+			{
+					var x,y,z;
+					var valX,valY,valZ;
+					
+					valX = prompt("Enter the first value: ");
+					valY = prompt("Enter the second value: ");
+					valZ = prompt("Enter the third value: ");
+					x = parseInt(valX);
+					y = parseInt(valY);
+					z = parseInt(valZ);
+					
+					var max=0;
+					
+						if(x>y && x>z )
+							{
+								max = x;
+								window.alert("The maximum number is: " + max);
+							}
+						else if(y>x && y>z )
+							{
+								max = y;
+								window.alert("The maximum number is: " + max);
+							}
+						else if(z>y && z>x)
+							{
+								max = z;
+								window.alert("The maximum number is: " + max);
+							}
+						else 
+						    {
+							  window.alert("All the numbers are equal");
+							}
+				
+			}
+	   
+		</script>
+		<!-- diameter = 2r, circumference = 2(pi)r , area = pi(r)^2 -->
+		<h3> Find the Area, Diameter, & Circumference </h3>
+		<button onclick="result()"> try it </button>
+		<script>
+		    function result()
+			{
+		        var radius;
+				var diameter=0;
+				var circumference =0; 
+				var area =0;
+				var pi = 3.14159;
+				
+				radius = prompt("Enter the radius of the circle: ");
+				
+				circumference = 2*pi*radius;
+				
+				diameter = 2*radius;
+				
+				area = pi*radius*radius;
+				window.alert( " Circumference: "+circumference 
+				             +"\n Diameter: " + diameter 
+							 +"\n Area: " + area);
+			}
+				
+		</script><br><br>
+		<!-- 6.24 Write a script that calculates the squares and cubes of the numbers from 
+		          0 to 5and outputs HTML5 text that displays the resulting values in an HTML5
+				  table format, as show below.
+				  [Note: This script does not require any input from the user.]-->
+	<h3> Print the square and cubes </h3>	
+	<table border="5">	
+		<!-- first row that contains heading -->
+        <tr>
+		    <th>number </th>
+			<th>square </th>
+			<th>cubes  </th>
+        </tr>	
+		<!-- second row-->
+        <tr>
+			<td>		
+					<script>
+							var a=0;
+							document.writeln(a);		
+					</script>
+			</td>
+			<td>
+					<script>
+					var a=0;
+					var square = a*a;
+					document.write(square);	
+					</script>
+			</td>
+			<td>
+					<script>
+					var a=0;
+					var cubes = a*a*a;
+					document.write(cubes);	
+					</script>
+			</td>
+		</tr>
+		<!-- third row -->
+		<tr>
+			<td>		
+					<script>
+					var b=1;
+					document.writeln(b);		
+			        </script>
+			</td>
+			<td>
+					<script>
+					var b=1;
+					var square = b*b;
+					document.write(square);	
+					</script>
+			</td>
+			<td>
+					<script>
+					var b=1;
+					var cubes = b*b*b;
+					document.write(cubes);	
+					</script>
+			</td>
+		</tr>
+		<!-- forth row -->
+		<tr>
+			<td>		
+					<script>
+					var a=2;
+					document.writeln(a);		
+					</script>
+			</td>
+			<td>
+					<script>
+					var a=2;
+					var square = a*a;
+					document.write(square);	
+					</script>
+			</td>
+			<td>
+					<script>
+					var a=2;
+					var cubes = a*a*a;
+					document.write(cubes);	
+					</script>
+			</td>
+		</tr>
+		<!-- fifth row -->
+		<tr>
+			<td>		
+					<script>
+					var a=3;
+					document.writeln(a);		
+					</script>
+			</td>
+			<td>
+					<script>
+					var a=3;
+					var square = a*a;
+					document.write(square);	
+					</script>
+			</td>
+			<td>
+					<script>
+					var a=3;
+					var cubes = a*a*a;
+					document.write(cubes);	
+					</script>
+			</td>
+		</tr>
+		<!-- six row -->
+		<tr>
+			<td>		
+					<script>
+					var a=4;
+					document.writeln(a);		
+					</script>
+			</td>
+			<td>
+					<script>
+					var a=4;
+					var square = a*a;
+					document.write(square);	
+					</script>
+			</td>
+			<td>
+					<script>
+					var a=4;
+					var cubes = a*a*a;
+					document.write(cubes);	
+					</script>
+			</td>
+		</tr>
+		<!-- seven row -->
+		<tr>
+			<td>		
+					<script>
+					var a=5;
+					document.writeln(a);		
+					</script>
+			</td>
+			<td>
+					<script>
+					var a=5;
+					var square = a*a;
+					document.write(square);	
+					</script>
+			</td>
+			<td>
+					<script>
+					var a=5;
+					var cubes = a*a*a;
+					document.write(cubes);	
+					</script>
+			</td>
+		</tr>
+	</table><br>
+    <!--6.21 Write a script that reads an integer and determines and
+            outputs HTML5 text that displays whether it’s odd or even. 
+			[Hint: Use the remainder operator. An even number is a multiple of 2. 
+			Any multiple of 2 leaves a remainder of zero when divided by 2.]-->
+	<h3> Even or Odd </h3>
+	<button onclick="evenOdd()"> try it </button>
+    <script>
+	    function evenOdd()
+		{
+	        var number;
+			var value;
+			value = prompt("Enter the number:" );
+			number = parseInt(value);
+			if(number%2 == 0)
+			{
+			    window.alert("Number is even");
+			}
+			else
+			{
+			    window.alert("Number is odd");
+			}
+		}
+	</script>
+   
+   <!--6.22 Write a script that reads in two integers anddetermines and outputs 
+	         HTML5 text that displays whether the first is a multiple of the second. 
+			 [Hint: Use the remainder operator.] 	-->
+	<h3>Multiple </h3>
+	<button onclick="multiple()">try it</button>
+	<script>
+	    function multiple()
+		{
+	        var a, b;
+			var valA, ValB;
+			
+			valA = prompt("Enter the first number: ");
+			valB = prompt("Enter the second number: ");
+			
+			a = parseInt(valA);
+			b = parseInt(valB);
+			
+			if(a%b == 0)
+			{
+			    window.alert("first number is tha multiple of second");
+			}
+			else
+			{
+			    window.alert("Not multiple");
+			}
+		}
+	</script>
+</body>
+</html>
