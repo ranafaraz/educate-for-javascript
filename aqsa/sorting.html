@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<hr>
+	               <!-- sorting array -->
+				   
+	<h1> Array Sorting </h1>
+	<h3> 1_sort() </h3>
+	<p>The sort() method sorts an array alphabetically: </p>
+	<button onclick="sortingArray()" > sort </button>
+		<p id="s1"></p>
+		<p id="s2"></p>
+    <script>
+	    var sorting = ["Bilal","Nadia","Madiha","Aqsa"];
+		document.getElementById("s1").innerHTML = sorting;
+	function sortingArray()
+	{
+	    sorting.sort();
+		document.getElementById("s2").innerHTML = "After Sorting:"+ " " + sorting;
+	}
+	 
+    </script>
+	
+	         <!--Reverse array-->
+	
+	<h3> 2_Reverse() </h3>
+	<p>The reverse() method reverts the elements.</p>
+ 
+	<button onclick="reverseArray()" > Reverse </button>
+		<p id="re1"></p>
+		<p id="re2"></p>
+    <script>
+	    var reverse = ["Bilal","Nadia","Madiha","Aqsa"];
+		document.getElementById("re1").innerHTML = reverse;
+	function reverseArray()
+	{
+	    reverse.reverse();
+		document.getElementById("re2").innerHTML = "After reverse:"+ " " + reverse;
+	} 
+    </script>
+	
+             <!-- Numeric sort -->
+	
+	<h3>3_Numeric Sort </h3>
+	<p>Click the button to sort the array in ascending order.</p>
+
+     <button onclick="numericData()"> click </button>
+        <p id="n1"></p>	 
+        <p id="n2"></p>	
+        <p id="n3"></p>	
+    <script>
+	        var data = [100,99,80,60,40,70,10,30,20];
+			document.getElementById("n1").innerHTML = data;
+		function numericData()
+		{
+		data.sort(function(a, b)
+		{
+		   return a-b;
+		});
+		
+		document.getElementById("n2").innerHTML = data;
+		
+		}
+    </script>	
+	
+	  <!-- Random sort -->
+	
+	<h3>4_Random Sort </h3>
+	<p>Click the button (again and again) to sort the array in random order.</p>
+  
+		<button onclick="myFunction()">Try it</button>
+
+		<p id="rand1"></p>
+		<p id="rand2"></p>
+
+	<script>
+		var array = [40, 100, 1, 5, 25, 10];
+		document.getElementById("rand1").innerHTML = array;    
+
+		function myFunction() {
+			array.sort(function(a, b){return 0.5 - Math.random()});
+			document.getElementById("rand2").innerHTML = array;
+		}
+	</script>
+	
+            <!-- find the maximum and minimum value -->
+	<h3>5_Maximum Value </h3>
+	<p id="demo"> </p>
+	<p id="demo1"> </p>
+	<script>
+	    var max = [20,10,23,40,80];
+		document.getElementById("demo").innerHTML = max;
+		max.sort(function(a,b)
+		{
+		return b-a;
+		});
+	document.getElementById("demo1").innerHTML ="The maximum value is: "+" "+ max[0];
+	</script>
+			 
+	<h3>6_Minimum Value </h3>
+	<p id="m"> </p>
+	<p id="m1"> </p>
+	<script>
+	    var min = [20,10,23,40,80];
+		document.getElementById("m").innerHTML = min;
+		min.sort(function(a,b)
+		{
+		return a-b;
+		});
+	document.getElementById("m1").innerHTML ="The minimum value is: "+" "+ min[0];
+	</script>
+	
+	    <!-- using math max() & min methods -->
+	<h3> 7_Math.max() </h3>
+	<p>Math.max.apply to find the highest number in an array:</p>
+	<span id="mv"></span>
+	<span id="mv2"></span>
+    <script>
+	    var maxArray = [20,40,50,72,30,80,90,10];
+		document.getElementById("mv").innerHTML = maxArray + "<br>"; 
+		document.getElementById("mv2").innerHTML ="The maximum value is:" +" " + maxFunction(maxArray);
+		
+	function maxFunction(array)
+	{
+	     return Math.max.apply(null,array);
+	}
+    </script>
+	
+	  
+	<h3> 8_Math.min() </h3>
+	<p>Math.min.apply to find the lowest number in an array:</p>
+	<span id="mm"></span>
+	<span id="mm1"></span>
+    <script>
+	    var minArray = [20,40,50,72,30,80,90,10];
+		document.getElementById("mm").innerHTML = minArray + "<br>"; 
+		document.getElementById("mm1").innerHTML ="The minimum value is:" +" " + minFunction(minArray);
+		
+	function minFunction(array)
+	{
+	     return Math.min.apply(null,array);
+	}
+    </script>
+	
+	<!-- javaScript method to find max and min value -->
+	<h3> 9_JavaScript method to find maximum value </h3>
+	<p id="3"></p>
+	<p id="4"></p>
+	<script>
+	    var dataArray = [20,90,30, 21, 10, 5];
+		document.getElementById("3").innerHTML = dataArray + "<br>";
+		document.getElementById("4").innerHTML = "The maximum number is"+ " " + dataFunction(dataArray);
+		
+	function dataFunction(arr)
+	{
+	    var len = arr.length;
+		var max = 0;
+		while(len--)
+		{
+		    if(arr[len] > max)
+			{
+			     max = arr[len];
+			}
+		}
+		return max;
+	}
+	</script>
+	
+	<h3> 10_JavaScript method to find minimum value </h3>
+	<p id="5"></p>
+	<p id="6"></p>
+	
+	<script>
+	    var dataArr = [20,90,30, 21, 10, 5];
+		document.getElementById("5").innerHTML = dataArr + "<br>";
+		document.getElementById("6").innerHTML = "The minimum number is"+ " " + dataFun(dataArr);
+		
+	function dataFun(arr2)
+	{
+	    var len = arr2.length;
+		var min = Infinity;
+		while(len--)
+		{
+		    if(arr2[len] < min)
+			{
+			     min = arr2[len];
+			}
+		}
+		return min;
+	}
+	</script>
+			
+	
+
+</body>
+</html>
