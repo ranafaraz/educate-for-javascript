@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset = "utf-8">
+</head>
+<body>
+        <h3> Example Chpater#1: </h3>
+        <button onclick="test()"> Try it </button>	
+        <script>
+		    function test(){
+		        var name;
+				name = prompt("Please enter your name: ");
+				document.writeln("<h2>Hello " + name + ", welcome to the JavaScript programming </h2>");
+				}
+		</script>
+		
+		
+		<!-- Adding Integers -->
+		<h3> Adding Integers </h3>
+        <button onclick="test1()"> Try it </button>		
+		
+		<script>
+		    function test1(){
+		        var firstNum;
+				var secondNum;
+				var num1;
+				var num2;
+				var sum;
+				firstNum = prompt("Enter first Number: ");
+				secondNum = prompt("Enter second Number: ");
+				num1 = parseInt(firstNum);
+				num2 = parseInt(secondNum);
+				sum = num1 + num2;
+				document.writeln("The sum of integer is " + sum );
+				}
+		</script>
+		
+		<!--Day status -->
+		<h3> Day Status </h3>
+		<button onclick="test2()"> try it </button>
+		<script>
+		        function test2()
+				{
+				    var time = new Date();
+					var name;
+					var hour = time.getHours();
+					
+					name = window.prompt("Enter Your Name:");
+					if(hour < 12)
+					{
+					    document.writeln("<h1> Good Morning, " );
+					}
+					if(hour >= 12)
+					{ 
+					<!-- convert to 12 houre clock -->
+					    hour = hour - 12;
+						
+						if( hour < 6)
+					         document.writeln("<h1> Good after noon, ");
+						
+					    if( hour >= 6)
+					         document.writeln("<h1> Good Evening, ");
+						
+                    }						
+                 document.writeln( name + ", Welcome to javaScript programming! </h1>" );					
+					
+				}
+		</script>
+</body>
+</html>
